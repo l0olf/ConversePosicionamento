@@ -177,7 +177,25 @@ document.addEventListener("DOMContentLoaded", () => {
        MODAL INICIAL
        ========================================= */
 
-    function closeIntroModal() {
+    async function enterFullscreen() {
+        const element = document.documentElement;
+
+        try {
+            if (element.requestFullscreen) {
+                await element.requestFullscreen();
+            } else if (element.webkitRequestFullscreen) {
+                await element.webkitRequestFullscreen();
+            } else if (element.msRequestFullscreen) {
+                await element.msRequestFullscreen();
+            }
+        } catch (error) {
+            console.warn("Fullscreen não foi ativado:", error);
+        }
+    }
+
+    async function closeIntroModal() {
+        await enterFullscreen();
+
         if (!introModal) return;
 
         introModal.classList.add("is-hidden");
