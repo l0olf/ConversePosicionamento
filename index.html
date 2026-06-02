@@ -26,7 +26,7 @@
 <body>
 
     <main class="presentation-wrapper">
-        <section class="slide hero-slide" id="slide-0">
+        <section class="slide hero-slide is-active" id="slide-0">
 
             <header class="top-nav">
                 <div class="nav-brand">POSICIONAMENTO / 01</div>
@@ -882,6 +882,74 @@
             01/11
         </div>
     </div>
+
+    <!-- POP-UP INICIAL DE CONTROLES -->
+<div class="intro-modal" id="introModal">
+    <div class="intro-modal-backdrop"></div>
+
+    <div class="intro-modal-card">
+        <span class="intro-modal-kicker">MODO APRESENTAÇÃO</span>
+
+        <h2>Como navegar</h2>
+
+        <p>
+            Use as setas do teclado ou clique nas laterais da tela para avançar e voltar os slides.
+        </p>
+
+        <div class="intro-controls-grid">
+
+            <div class="intro-control-item">
+                <div class="intro-control-icon">
+                    <i class="ph ph-arrow-left"></i>
+                </div>
+
+                <div>
+                    <h3>Lado esquerdo</h3>
+                    <span>Voltar slide</span>
+                </div>
+            </div>
+
+            <div class="intro-control-item">
+                <div class="intro-control-icon">
+                    <i class="ph ph-arrow-right"></i>
+                </div>
+
+                <div>
+                    <h3>Lado direito</h3>
+                    <span>Avançar slide</span>
+                </div>
+            </div>
+
+            <div class="intro-control-item">
+                <div class="intro-control-icon">
+                    <i class="ph ph-keyboard"></i>
+                </div>
+
+                <div>
+                    <h3>Teclado</h3>
+                    <span>Use ← → ou ↑ ↓</span>
+                </div>
+            </div>
+
+            <div class="intro-control-item">
+                <div class="intro-control-icon">
+                    <i class="ph ph-mouse"></i>
+                </div>
+
+                <div>
+                    <h3>Barra inferior</h3>
+                    <span>Aparece ao mover o mouse para baixo</span>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="intro-modal-button" id="introModalButton">
+            Começar apresentação
+            <i class="ph ph-arrow-right"></i>
+        </button>
+    </div>
+</div>
 
     <script src="script.js"></script>
 
